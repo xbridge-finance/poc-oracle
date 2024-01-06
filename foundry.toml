@@ -1,2 +1,32 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+
+gas_reports = ["*"]
+private_key = "${PRIVATE_KEY}"
+solc = "0.8.20"
+optimizer = true
+optimizer_runs = 10_000
+verbosity = 3 # The verbosity of tests
+bytecode_hash = "none" # For deterministic code
+block_timestamp = 1622400000 # Timestamp for tests (non-zero)
+
+# silence warnings
+# 5667 - Unused function parameter
+ignored_error_codes = [5667]
+
+ffi = false
+initial_balance = '0x56bc75e2d63100000' # 100 ETH
+block_number = 16015000
+
+[fmt]
+line_length = 160
+
 [profile.ci.fuzz]
 runs = 10_000
+
+[rpc_endpoints]
+local = "http://127.0.0.1:8545"
+goerli = "https://rpc.ankr.com/eth_goerli"
+testnet="https://ethereum-goerli.publicnode.com"
