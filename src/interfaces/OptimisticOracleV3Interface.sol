@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-only
+
 pragma solidity 0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
@@ -166,13 +167,7 @@ interface OptimisticOracleV3Interface {
 
     event AssertionDisputed(bytes32 indexed assertionId, address indexed caller, address indexed disputer);
 
-    event AssertionSettled(
-        bytes32 indexed assertionId,
-        address indexed bondRecipient,
-        bool disputed,
-        bool settlementResolution,
-        address settleCaller
-    );
+    event AssertionSettled(bytes32 indexed assertionId, address indexed bondRecipient, bool disputed, bool settlementResolution, address settleCaller);
 
     event AdminPropertiesSet(IERC20 defaultCurrency, uint64 defaultLiveness, uint256 burnedBondPercentage);
 }

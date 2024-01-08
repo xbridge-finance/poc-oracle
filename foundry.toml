@@ -28,5 +28,6 @@ runs = 10_000
 
 [rpc_endpoints]
 local = "http://127.0.0.1:8545"
+mainnet = "https://rpc.ankr.com/eth"
 goerli = "https://rpc.ankr.com/eth_goerli"
 testnet="https://ethereum-goerli.publicnode.com"

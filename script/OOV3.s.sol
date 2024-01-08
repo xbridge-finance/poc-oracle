@@ -1,4 +1,5 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: AGPL-3.0-only
+
 pragma solidity ^0.8.20;
 
 import "forge-std/Script.sol";
@@ -8,12 +9,6 @@ import "src/OOV3.sol";
 contract DeployScript is Script {
     uint256 pkDeployer = vm.envUint("PRIVATE_KEY");
     OOV3 oo;
-
-    // function setUp() external {
-    //     console.log("pk:", pkDeployer);
-    //     address u1 = vm.addr(pkDeployer);
-    //     console.log("**** u1: ", u1);
-    // }
 
     function run() external {
         console.log("running");

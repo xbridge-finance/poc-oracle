@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.20;
 
-import "./OptimisticOracleV3Interface.sol";
+import "./interfaces/OptimisticOracleV3Interface.sol";
 
 contract OOV3 {
     // Create an Optimistic Oracle V3 instance at the deployed address on Görli.

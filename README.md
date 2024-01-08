@@ -20,8 +20,19 @@ This code repository serves as a Proof of Concept (PoC) for seamlessly integrati
 forge init
 forge build
 forge test
+```
+
+### Optimistic Oracle
+
+```sh
 forge script script/OOV3.s.sol:DeployScript --rpc-url testnet --broadcast
 forge script script/OOV3.s.sol:ExecuteScript --rpc-url testnet --broadcast -s 'assertTruth()' 
 forge script script/OOV3.s.sol:ExecuteScript --rpc-url testnet --broadcast -s 'settle()'
-forge script script/OOV3.s.sol:ExecuteScript --rpc-url testnet --broadcast -s 'query()'
+forge script script/OOV3.s.sol:ExecuteScript --rpc-url testnet -s 'query()'
+```
+
+### Chainlink Oracle
+
+```sh
+forge script script/PriceFeed.s.sol:QueryScript --rpc-url mainnet
 ```
